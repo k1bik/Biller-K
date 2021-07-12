@@ -3,16 +3,26 @@ package ru.keebi.TelegramBot.Entity;
 import javax.persistence.*;
 
 @Entity
-@Table
 public class OrderProduct {
 
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
 
     @ManyToOne
     private ClientOrder order;
 
     @ManyToOne
     private Product product;
+
+    @Column(nullable = false)
+    private int countProduct;
+
+    public int getCountProduct() {
+        return countProduct;
+    }
+
+    public void setCountProduct(int countProduct) {
+        this.countProduct = countProduct;
+    }
 }

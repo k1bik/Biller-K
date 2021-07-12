@@ -3,23 +3,22 @@ package ru.keebi.TelegramBot.Entity;
 import javax.persistence.*;
 
 @Entity
-@Table
 public class Product {
 
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
 
     @ManyToOne
     private Category category;
 
-    @Column
+    @Column(nullable = false, length = 50, unique = true)
     private String name;
 
-    @Column
+    @Column(nullable = false, length = 400)
     private String description;
 
-    @Column
+    @Column(nullable = false, precision=15, scale=2)
     private double price;
 
     public Category getCategory() {

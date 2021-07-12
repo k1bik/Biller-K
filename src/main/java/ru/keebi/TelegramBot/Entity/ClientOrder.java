@@ -3,20 +3,19 @@ package ru.keebi.TelegramBot.Entity;
 import javax.persistence.*;
 
 @Entity
-@Table
 public class ClientOrder {
 
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
 
     @ManyToOne
     private Client client;
 
-    @Column
+    @Column(nullable = false)
     private int status;
 
-    @Column
+    @Column(nullable = false, precision=15, scale=2)
     private double total;
 
     public Client getClientId() {

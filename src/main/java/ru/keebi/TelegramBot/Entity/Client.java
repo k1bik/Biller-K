@@ -3,23 +3,22 @@ package ru.keebi.TelegramBot.Entity;
 import javax.persistence.*;
 
 @Entity
-@Table
 public class Client {
 
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
 
-    @Column
+    @Column(nullable = false)
     private long externalId;
 
-    @Column
+    @Column(nullable = false, length = 255)
     private String fullName;
 
-    @Column
+    @Column(nullable = false, length = 15)
     private int phoneNumber;
 
-    @Column
+    @Column(nullable = false, length = 400)
     private String address;
 
     public String getFullName() {

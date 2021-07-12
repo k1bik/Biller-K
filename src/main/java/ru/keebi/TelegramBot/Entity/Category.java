@@ -3,18 +3,17 @@ package ru.keebi.TelegramBot.Entity;
 import javax.persistence.*;
 
 @Entity
-@Table
 public class Category {
 
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
 
-    @Column
+    @Column(nullable = false, length = 50, unique = true)
     private String name;
 
     @Column
-    private int parent;
+    private Long parent;
 
     public String getName() {
         return name;
@@ -24,13 +23,12 @@ public class Category {
         this.name = name;
     }
 
-    public int getParent() {
+    public Long getParent() {
         return parent;
     }
 
-    public void setParent(int parent) {
+    public void setParent(Long parent) {
         this.parent = parent;
     }
-
 
 }
