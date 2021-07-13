@@ -13,10 +13,10 @@ public class ClientOrder {
     private Client client;
 
     @Column(nullable = false)
-    private int status;
+    private Integer status;
 
     @Column(nullable = false, precision=15, scale=2)
-    private double total;
+    private Double total;
 
     public Client getClientId() {
         return client;
@@ -26,19 +26,19 @@ public class ClientOrder {
         this.client = client;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
-    public double getTotal() {
+    public Double getTotal() {
         return total;
     }
 
-    public void setTotal(double total) {
+    public void setTotal(Double total) {
         this.total = total;
     }
 }

@@ -10,13 +10,13 @@ public class Client {
     private Long id;
 
     @Column(nullable = false)
-    private long externalId;
+    private Long externalId;
 
     @Column(nullable = false, length = 255)
     private String fullName;
 
     @Column(nullable = false, length = 15)
-    private int phoneNumber;
+    private Integer phoneNumber;
 
     @Column(nullable = false, length = 400)
     private String address;
@@ -29,11 +29,11 @@ public class Client {
         this.fullName = fullName;
     }
 
-    public int getPhoneNumber() {
+    public Integer getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(Integer phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -45,11 +45,11 @@ public class Client {
         this.address = address;
     }
 
-    public long getExternalId() {
+    public Long getExternalId() {
         return externalId;
     }
 
-    public void setExternalId(long externalId) {
+    public void setExternalId(Long externalId) {
         this.externalId = externalId;
     }
 }

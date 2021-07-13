@@ -32,7 +32,7 @@ public class FillingTests {
 
     }
 
-    private void saveClient(String address, Integer externalId, String fullName, Integer phoneNumber){
+    private void saveClient(String address, Long externalId, String fullName, Integer phoneNumber){
 
         Client client = new Client();
         client.setAddress(address);
@@ -66,8 +66,8 @@ public class FillingTests {
     @Test
     public void createTwoClients(){
 
-        saveClient("address1", 1, "fullName1", 123 );
-        saveClient("address2", 2, "fullName2", 321 );
+        saveClient("address1", 1L, "fullName1", 123 );
+        saveClient("address2", 2L, "fullName2", 321 );
 
     }
 

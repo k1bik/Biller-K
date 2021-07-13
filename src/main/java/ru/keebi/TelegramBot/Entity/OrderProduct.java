@@ -16,13 +16,13 @@ public class OrderProduct {
     private Product product;
 
     @Column(nullable = false)
-    private int countProduct;
+    private Integer countProduct;
 
-    public int getCountProduct() {
+    public Integer getCountProduct() {
         return countProduct;
     }
 
-    public void setCountProduct(int countProduct) {
+    public void setCountProduct(Integer countProduct) {
         this.countProduct = countProduct;
     }
 }
