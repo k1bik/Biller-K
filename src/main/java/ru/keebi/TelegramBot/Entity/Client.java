@@ -52,4 +52,13 @@ public class Client {
     public void setExternalId(Long externalId) {
         this.externalId = externalId;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
 }
