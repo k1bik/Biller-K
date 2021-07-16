@@ -25,4 +25,21 @@ public class OrderProduct {
     public void setCountProduct(Integer countProduct) {
         this.countProduct = countProduct;
     }
+
+    public ClientOrder getOrder() {
+        return order;
+    }
+
+    public void setOrder(ClientOrder order) {
+        this.order = order;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
 }
